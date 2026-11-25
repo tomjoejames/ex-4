@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Background Colour Changer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="panel">
+    <h1>Background Colour Changer</h1>
+    <p class="current">Current colour: <code id="colorCode">#FFFFFF</code>
+      <button id="copyBtn" class="small" title="Copy colour code">Copy</button>
+    </p>
+
+    <h3>Preset colours</h3>
+    <div id="presets" class="presets"></div>
+
+    <h3>Pick your own</h3>
+    <div class="row">
+      <input type="color" id="picker" value="#ffffff" aria-label="Colour picker">
+      <input type="text" id="hexInput" placeholder="#1e90ff" maxlength="7" aria-label="Hex code">
+      <button id="applyHex">Apply</button>
+    </div>
+
+    <h3>Random &amp; automatic</h3>
+    <div class="row">
+      <button id="randomBtn">Random colour</button>
+      <button id="gradientBtn">Random gradient</button>
+      <button id="autoBtn">Start auto change</button>
+    </div>
+    <label class="speed">
+      Auto speed: <span id="speedLabel">1.5</span>s
+      <input type="range" id="speed" min="0.5" max="5" step="0.5" value="1.5">
+    </label>
+
+    <h3>History</h3>
+    <div id="history" class="history"><span class="muted">No colours yet</span></div>
+
+    <button id="resetBtn" class="link">Reset to white</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
